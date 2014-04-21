@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  body
+    a.back
+    #stage
+      #step1
+        .content
+          h1 What do you want to do?
+          a.button.encrypt.green Encrypt a file
+          a.button.decrypt.magenta Decrypt a file
+      #step2
+        .content.if-encrypt
+          h1 Choose which file to encrypt
+          h2 An encrypted copy of the file will be generated. No data is sent to our server.
+          a.button.browse.blue Browse
+          input#encrypt-input(type='file')
+        .content.if-decrypt
+          h1 Choose which file to decrypt
+          h2 Only files encrypted by this tool are accepted.
+          a.button.browse.blue Browse
+          input#decrypt-input(type='file')
+      #step3
+        .content.if-encrypt
+          h1 Enter a pass phrase
+          h2
+            | This phrase will be used as an encryption key. Write it down or remember it; you won't be able to restore the file without it.
+          input(type='password')
+          a.button.process.red Encrypt!
+        .content.if-decrypt
+          h1 Enter the pass phrase
+          h2
+            | Enter the pass phrase that was used to encrypt this file. It is not possible to decrypt it without it.
+          input(type='password')
+          a.button.process.red Decrypt!
+      #step4
+        .content
+          h1 Your file is ready!
+          a.button.download.green Download
+  script(src='/javascripts/aes.js')
+  script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+  script(src='javascripts/file.js')
+
+
