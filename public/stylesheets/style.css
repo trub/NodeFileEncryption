@@ -20,7 +20,7 @@ html{
 
 a, a:visited {
     outline:none;
-    color:#389dc1;
+    color:#9ad58c;
 }
 
 a:hover{
@@ -165,19 +165,19 @@ body.decrypt .if-decrypt{
 }
 
 .button.green{
-    background-color:#92cd84;
+    background-color:#87df7f;
 }
 
 .button.magenta{
-    background-color:#e661b7;
+    background-color:#fe5fba;
 }
 
 .button.blue{
-    background-color:#798dd7;
+    background-color:#a260fe;
 }
 
 .button.red{
-    background-color: #c15645;
+    background-color: #F3A22F;
 }
 
 /* Styles for specific buttons */
@@ -221,19 +221,19 @@ body.decrypt .if-decrypt{
 
 
 #step1{
-    background-color:#75c0d1;
+    background-color:#fe9b79;
 }
 
 body.encrypt #step2{
-    background-color: #9ad58c;
+    background-color: #c2e493;
 }
 
 body.decrypt #step2{
-    background-color: #E7A8D1;
+    background-color: #fe92d0;
 }
 
 #step3{
-    background-color:#d5d788;
+    background-color:#7984fe;
 }
 
 #step3 input[type=password]{
